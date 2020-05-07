@@ -1,5 +1,5 @@
 [default]
-SQLALCHEMY_DATABASE_URI = "sqlite:///database.db"
+SQLALCHEMY_DATABASE_URI = "postgres://riucgnicwesbfw:da1c6ca83e9a67bc2a35913635849bf2ca27cfe57d098d1882249f6397d4413d@ec2-52-202-22-140.compute-1.amazonaws.com:5432/d40ihvt9l1agrr"
 SQLALCHEMY_TRACK_MODIFICATIONS = "False"
 
 UPLOAD_FOLDER = 'storage'
