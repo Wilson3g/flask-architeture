@@ -13,7 +13,7 @@ class FileResource(Resource):
         return File.get_delete_put_post()
 
     @token_required
-    def post(self, current_user):
+    def post(self):
         if 'file' not in request.files:
             return {'success': False, 'message': 'Nenhuma imagem enviada'}, 500
 
@@ -28,7 +28,7 @@ class FileResource(Resource):
         if file and allowed_file:
             hased_name = str(datetime.datetime.now().timestamp())+'.pdf'
 
-            new_file = File(file.filename, hased_name, current_user.user_id)
+            new_file = File(file.filename, hased_name, 1)
             db.session.add(new_file)
             db.session.commit()
             
