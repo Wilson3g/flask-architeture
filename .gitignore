@@ -2,6 +2,5 @@
 .env/
 venv/
 __pycache__/
-migrations
 database.db
 *.pyc
