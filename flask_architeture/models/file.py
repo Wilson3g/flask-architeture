@@ -8,11 +8,11 @@ class File(db.Model):
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     name = db.Column(db.String(255), nullable=False)
     path_file = db.Column(db.String(255), nullable=False)
-    user_id = db.Column(db.Integer(), db.ForeignKey('users.id'), nullable=False)
+    # user_id = db.Column(db.Integer(), db.ForeignKey('users.id'), nullable=False)
     created_at = db.Column(db.DateTime, default=datetime.datetime.utcnow)
     updated_at = db.Column(db.DateTime, default=datetime.datetime.utcnow, server_onupdate=db.func.now())
 
-    def __init__(self, name, path_file, user_id):
+    def __init__(self, name, path_file):
         self.name = name
         self.path_file = path_file
-        self.user_id = user_id
+        # self.user_id = user_id
